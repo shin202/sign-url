@@ -26,7 +26,7 @@ const options: SignatureOptions = {
 const signer = SignUrl(options);
 ```
 
-Possible options: [`View here`]()
+Possible options: [`View here`](https://github.com/shin202/sign-url/blob/main/src/index.ts#L7-L20)
 
 ### Sign an URL
 
@@ -35,7 +35,7 @@ Sign the given URL.
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | url       | string | The url to sign |
-| options (optional) | [`SignOptions`]() | The sign options |
+| options (optional) | [`SignOptions`](https://github.com/shin202/sign-url/blob/main/src/index.ts#L22-L39) | The sign options |
 
 ```ts
 const signedUrl = signer.sign(`http://localhost:8080/example`);
@@ -49,7 +49,7 @@ You can using it with express as middleware.
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | signer    | [`SignUrl`]() | The signature object |
-| options (optional) | [`VerifierOptions`]() | The verifier options |
+| options (optional) | [`VerifierOptions`](https://github.com/shin202/sign-url/blob/main/src/index.ts#L73-L90) | The verifier options |
 
 ```ts
 import signed from "sign-url/middleware/signed.middleware"
@@ -69,7 +69,7 @@ app.get("/example", signed(signer), (req, res, next) => {
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | url       | string | The signed url to verify |
-| options (optional) | [`VerifyOptions`]() | The verify options |
+| options (optional) | [`VerifyOptions`](https://github.com/shin202/sign-url/blob/main/src/index.ts#L71) | The verify options |
 
 ```ts
 try {
@@ -82,7 +82,7 @@ try {
 ```
 
 ### Handling Error
-If signature is not valid, the verify method throws [`SignatureError`]().
+If signature is not valid, the verify method throws [`SignatureError`](https://github.com/shin202/sign-url/blob/main/src/index.ts#L108-L115).
 
 You can handle these errors yourself, using express error handler
 
@@ -159,7 +159,7 @@ app.listen(8080, () => {
 
 ## License
 
-[`MIT`]()
+[`MIT`](https://github.com/shin202/sign-url/blob/main/LICENSE)
 
 
 
