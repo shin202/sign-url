@@ -8,7 +8,7 @@ A tiny NodeJS library using for signing the url and validating with HMAC algorit
 Install with npm
 
 ```bash
-  npm install lets-sign-url
+  npm install url-shield
 ```
     
 ## Usage/Examples
@@ -16,7 +16,7 @@ Install with npm
 Create signature object using for sign and validate url.
 
 ```ts
-import SignUrl from "lets-sign-url"
+import SignUrl from "url-shield"
 
 // Pass your options here.
 const options: SignatureOptions = {
@@ -52,7 +52,7 @@ You can using it with express as middleware.
 | options (optional) | [`VerifierOptions`](https://github.com/shin202/sign-url/blob/main/src/index.ts#L73-L90) | The verifier options |
 
 ```ts
-import signed from "lets-sign-url/middleware/signed.middleware"
+import signed from "url-shield/middleware/signed.middleware"
 
 /* Your other code
 ...
@@ -87,7 +87,7 @@ If signature is not valid, the verify method throws [`SignatureError`](https://g
 You can handle these errors yourself, using express error handler
 
 ```ts
-import {SignatureError} from "lets-sign-url"
+import {SignatureError} from "url-shield"
 
 app.use((err, req, res, next) => {
     if (err instanceof SignatureError) {
@@ -99,7 +99,7 @@ app.use((err, req, res, next) => {
 Or you can pass error handlers in verify middleware
 
 ```ts
-import signed from "lets-sign-url/middleware/signed.middleware"
+import signed from "url-shield/middleware/signed.middleware"
 
 const signedMiddleware = signed(signer, {
     blackholed: SignatureErrorHandler,
@@ -112,8 +112,8 @@ const signedMiddleware = signed(signer, {
 
 ```ts
 import express, {Request, Response, NextFunction} from "express"
-import SignUrl from "lets-sign-url"
-import signed from "lets-sign-url/middleware/signed.middleware"
+import SignUrl from "url-shield"
+import signed from "url-shield/middleware/signed.middleware"
 
 const app = express();
 
