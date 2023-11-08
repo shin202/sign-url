@@ -1,6 +1,6 @@
 {
   "name": "url-shield",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny NodeJS library using for signing the url and validating with HMAC algorithm.",
   "main": "dist/index.js",
   "scripts": {
