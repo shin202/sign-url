@@ -38,4 +38,4 @@ const signed = (signer: SignUrl, options: VerifierOptions = defaultOptions) => (
     return next();
 }
 
-export default signed;
+export {signed};

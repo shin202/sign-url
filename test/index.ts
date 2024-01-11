@@ -1,11 +1,11 @@
 import express from "express"
-import SignUrl from "../src"
-import signed from "../src/middleware/signed.middleware"
+import {SignUrl} from "../dist"
+import {signed} from "../dist/middleware"
 import SignatureErrorHandler from "./utils/SignatureErrorHandler"
 
 const app = express();
 
-const signer = SignUrl({
+const signer = new SignUrl({
     key: "abc",
 });
 

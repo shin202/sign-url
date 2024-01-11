@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.signed = void 0;
 const index_1 = require("../index");
 const request_ip_1 = __importDefault(require("request-ip"));
 const defaultOptions = {
@@ -30,4 +31,4 @@ const signed = (signer, options = defaultOptions) => (req, res, next) => {
     }
     return next();
 };
-exports.default = signed;
+exports.signed = signed;
